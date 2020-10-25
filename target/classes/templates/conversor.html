@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Conversor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+ <div style="margin: 0 auto; margin-top: 400px; color: white; background-color: black; width: 50%; height: 50%; text-align: center">
+    <form method="POST" action="#" th:action="@{/conversor}" th:object="${conversor}">
+     <input class="input" type="text" placeholder="" th:field="*{dolar}"/>
+     <input class="input"  type="text" placeholder=""  th:field="*{real}"/>
+     <button class="button centered" type="submit" value="Submit" style="margin-top: 100px; align-items: center; height: 200px; justify-content: center; text-align: center; color: white; background-color: red; width: 200px;">Enviarr</button>
+    </form>
+ </div>
+</body>
+</html>

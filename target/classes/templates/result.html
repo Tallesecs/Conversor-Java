@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    <form method="POST" action="#" th:action="@{/greeting}" th:object="${greeting}">
+    <p>Cotação U$D <input class="input" type="text" placeholder="U$D to BRL ex: 5,60" th:field="*{dolar}"/></p>
+   <p> U$D <input class="input"  type="text" placeholder="U$D" th:field="*{real}"/></p>
+     <button class="button centered" type="submit" value="Submit" style="margin-top: 32px; color: white; background-color: green; width: 100px;">Converter em reais</button>
+    </form> 
+    <p th:text="${greeting.real} + ' U$D são ' + ${converted} + ' R$'  " ></p>
+</body>
+</html>

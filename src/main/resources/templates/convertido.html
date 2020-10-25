@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Conversor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    <form method="POST" action="#" th:action="@{/conversor}" th:object="${conversor}">
+        <div style="margin: 0 auto; margin-top: 400px; color: white; background-color: black; width: 50%; height: 50%; text-align: center">
+    <p>Dólar Cotação <input class="input" type="text" placeholder="Dolara para real" th:field="*{dolar}"/></p>
+   <p> Dólar <input class="input"  type="text" placeholder="Dolar" th:field="*{real}"/></p>
+
+     <button type="submit" value="Submit" style="color: white; background-color: red; width: 100px;">Converter</button>
+        </div>
+    </form>
+    <div style="margin: 0 auto; color: white; background-color: red; width: 50%; height: 50%; text-align: center">
+    <p th:text="${conversor.real} + ' Dolares é ' + ${convertido} + ' reais'  " ></p>
+
+    </div>
+
+</body>
+</html>
